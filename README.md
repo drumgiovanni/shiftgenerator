@@ -19,7 +19,7 @@
     　他に従業員がいない場合は"no"  
     　いる場合は"yes"、あるいはEnterキーを入力。  
 
-![result](https://github.com/drumgiovanni/shiftmaker/blob/master/gif2.mov.gif)
+![result](https://github.com/drumgiovanni/shiftgenerator/blob/master/gif2.mov.gif)
 
 
 
@@ -27,4 +27,4 @@
 そこに完成したシフト、および各従業員の勤務可能日、出勤日が入っている。
 
 
-![result](https://github.com/drumgiovanni/shiftmaker/blob/master/gif3.mov.gif)
+![result](https://github.com/drumgiovanni/shifgenerator/blob/master/gif3.mov.gif)
