@@ -1,4 +1,4 @@
-# shiftmaker
+# shiftgenerator
 バイト先で使える、シフトを自動で組んでくれるプログラムです。
 
 ## 使い方
