@@ -86,6 +86,7 @@ while True:                                                 # 従業員の名前
         dayofflist = list(map(int, dayofflist)) # 休みのリストの中身をint型に変換
     except ValueError:
         pass
+
     handle = ""
     for i in dayofflist:
         if i != "":
@@ -282,7 +283,7 @@ for l in range(0,len(fullWorkers)):
 
         for d in fixingset:
             if num - len(workingdays[fullWorkers[l]]) >= 2:
-                if d not in workingdays[fixingp]:
+                if not d in workingdays[fixingp]:
                     if d in workabledays[fixingp]:
                         workingdays[p].remove(d)
                         print(f"{p}から{fixingp}へ{d}を移動")
