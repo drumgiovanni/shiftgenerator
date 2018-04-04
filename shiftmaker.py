@@ -86,7 +86,14 @@ while True:                                                 # 従業員の名前
         dayofflist = list(map(int, dayofflist)) # 休みのリストの中身をint型に変換
     except ValueError:
         pass
-
+    handle = ""
+    for i in dayofflist:
+        if i != "":
+            if i not in daysInTheMonth:
+                print(f"{i}日は{nextmonth}月に存在しないよー")
+                handle = "X"
+    if handle == "X":
+        continue
     workerinfo = {}
     workerinfo["属性"] = ptype
     workerinfo["休み希望"] = dayofflist
