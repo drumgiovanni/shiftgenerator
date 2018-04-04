@@ -210,7 +210,6 @@ while len(checklist) >= 1:
         for days in checklist:
             num = 0
             p = ""
-
             for full in fullWorkers:
                 if days in workabledays[full]:
                     if num == 0:
@@ -256,9 +255,10 @@ for l in range(0,len(partWorkers)):
         fixingp = partWorkers[l]
         for d in fixingset:
             if num - len(workingdays[partWorkers[l]]) >= 2:
-                if d in workabledays[fixingp]:
-                    workingdays[p].remove(d)
-                    workingdays[fixingp].append(d)
+                if not d in workingdays[fixingp]:
+                    if d in workabledays[fixingp]:
+                        workingdays[p].remove(d)
+                        workingdays[fixingp].append(d)
 
 p = ""
 num = 0
@@ -282,9 +282,11 @@ for l in range(0,len(fullWorkers)):
 
         for d in fixingset:
             if num - len(workingdays[fullWorkers[l]]) >= 2:
-                if d in workabledays[fixingp]:
-                    workingdays[p].remove(d)
-                    workingdays[fixingp].append(d)
+                if d not in workingdays[fixingp]:
+                    if d in workabledays[fixingp]:
+                        workingdays[p].remove(d)
+                        print(f"{p}から{fixingp}へ{d}を移動")
+                        workingdays[fixingp].append(d)
 
 wb.create_sheet(index=2, title="workingday")
 sh2 = wb["workingday"]
